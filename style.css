@@ -1,0 +1,230 @@
+body{
+    margin: 20px;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    font-display: verdana, Arial, Helvetica;
+    background-color: white;
+}
+/* -----------Name -----------------*/
+h2{
+    font-family: 'Saira Stencil One', cursive;
+    font-weight: 400;
+    font-size: 25px;
+    margin: 30px 0 0 20px;
+    text-align: left;
+}
+h2 a{
+    text-decoration: none;
+    color: black;
+}
+h2 a:hover{
+    color: rgb(51, 94, 51);
+}
+
+/* -----------Menu -----------------*/
+.menu{
+    float: right;
+    margin: -40px 0 0 0;
+
+}
+.menu nav ul{
+    list-style: none;
+}
+.menu nav ul li {
+    display: inline-block;
+    position: relative;
+    padding: 0px 20px;
+}
+.menu nav ul li a{
+    color: black;
+    font-size: 16px;
+}
+.menu nav ul li a:hover{
+    color: rgb(51, 94, 51);
+}
+.menu nav ul li:hover ul{
+    left: -40px;
+}  
+.menu nav ul li ul{
+    left:-999999px;
+    position: absolute;
+    top: 25px;
+    width: 16em;
+}
+.menu nav ul li ul li{
+    font-size: 12px;
+    display: block;
+    text-align: left;
+}
+.menu nav ul li ul a:hover{
+    color:rgb(179, 90, 31);
+}
+.menu nav a{ 
+    text-decoration: none;
+    padding: 15px 20px;
+} 
+/* -----------Gallery Images -----------------*/
+
+.container{
+    margin-top: 70px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: 100px 300px;
+    grid-gap: 10px;
+}
+.gallery-item{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gallery-item .image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.gallery-item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.gallery-item:hover .image img{
+    transform: scale(1.5);
+}
+.gallery-item .text{
+    font-family: 'Saira Stencil One', cursive;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 4px 2px 1px rgb(206, 170, 71), 4px -2px 5px rgb(180, 187, 76);
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-30%,-50%);
+    color: #fff;
+    pointer-events:none;
+    z-index: 4;
+    transition: 0.3 ease-in-out;
+}
+.gallery-item:hover .text{
+    opacity: 1;
+    animation: move-down .3s linear;
+    padding: 1em;
+    width: 100%;
+}
+.w-3{
+    grid-column: span 3;
+}
+.w-2{
+    grid-column: span 2;
+}
+.w-3{
+    grid-column: span 3;
+}
+.w-4{
+    grid-column: span 4;
+}
+.w-5{
+    grid-column: span 5;
+}
+.w-6{
+    grid-column: span 6;
+}
+.h-1{
+    grid-row: span 1;
+}
+.h-2{
+    grid-row: span 2;
+}
+.h-3{
+    grid-row: span 3;
+}
+.h-4{
+    grid-row: span 4;
+}
+.h-5{
+    grid-row: span 5;
+}
+.h-6{
+    grid-row: span 6;
+}
+
+@media screen and (max-width:500px){
+    h2{
+        text-align: center;
+        margin: 30px 0 0 20px;
+    }
+    .menu{
+        text-align: center;
+        margin: 17px 50px 0 0;
+    }
+    .container{
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 140px;
+    }
+    .w-1,.w-2,.w-3,.w-4,.w-4,.w-6{
+        grid-column:span 1;
+    }
+     footer{
+        text-align: center;
+    }
+    header{
+        margin-bottom: 50px;
+    }
+    .socialicon{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px; 
+    }
+    
+    
+       
+
+    }  
+
+}
+
+
+@keyframes move-down{
+    0%{
+        top:10%;
+    }
+    50%{
+        top:35%;
+    }
+    100%{
+        top:50%;
+    }
+}
+
+
+footer {
+    border-top: 2px;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+
+    border-color:rgb(51, 94, 51);
+    border-style: solid;
+    color: rgb(51, 94, 51);
+    font-style: italic;
+    padding: 1px 0 0px 0px;
+}
+.socialicon ul{
+    list-style: none;
+}
+.socialicon ul li{
+    display: inline-block;
+    float: right;
+    padding: 20px 20px 30px 0;
+    margin-top: -50px;
+}
+
+
+
+}
